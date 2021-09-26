@@ -5,7 +5,6 @@ abstract class ExampleStateBase {
   late String initialText;
   @protected
   late String stateText;
-
   String get currentText => stateText;
 
   // ignore: use_setters_to_change_properties

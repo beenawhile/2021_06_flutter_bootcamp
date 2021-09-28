@@ -1,3 +1,4 @@
+// xml data source
 class XmlContactsApi {
   final String _contactsXml = '''
   <?xml version="1.0"?>

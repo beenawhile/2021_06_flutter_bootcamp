@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import '../adapter.dart';
 
+// json adapter
 class JsonContactsAdapter implements IContactsAdapter {
   final _api = JsonContactsApi();
 

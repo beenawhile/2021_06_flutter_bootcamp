@@ -3,8 +3,9 @@ import 'dart:math';
 import 'package:flutter_design_patterns/design_patterns/template-method/template_method.dart';
 import 'package:meta/meta.dart';
 
-// template method review
 abstract class StudentsBmiCalculator {
+  const StudentsBmiCalculator();
+
   List<Student> calculateBmiAndReturnStudentList() {
     var studentList = getStudentsData();
     studentList = doStudentsFiltering(studentList);
@@ -12,6 +13,7 @@ abstract class StudentsBmiCalculator {
     return studentList;
   }
 
+  // final methods
   void _calculateStudentsBmi(List<Student> studentList) {
     for (final student in studentList) {
       student.bmi = _calculateBmi(student.height, student.weight);
@@ -22,7 +24,7 @@ abstract class StudentsBmiCalculator {
     return weight / pow(height, 2);
   }
 
-  // Hook methods
+  // Hook Methods
   @protected
   List<Student> doStudentsFiltering(List<Student> studentList) {
     return studentList;

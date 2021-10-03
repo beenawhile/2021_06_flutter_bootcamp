@@ -1,5 +1,5 @@
-import 'package:xml/xml.dart';
 import 'package:meta/meta.dart';
+import 'package:xml/xml.dart';
 
 import '../../template_method.dart';
 

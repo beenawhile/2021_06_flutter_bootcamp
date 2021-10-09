@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_design_patterns/widgets/design_patterns/composite/files/file.dart';
 
 class AudioFile extends File {
-  const AudioFile(String title, int size)
-      : super(
-          title: title,
+  const AudioFile({
+    required String title,
+    required int size,
+  }) : super(
           size: size,
+          title: title,
           icon: Icons.music_note,
         );
 }

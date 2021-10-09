@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_design_patterns/constants/layout_constants.dart';
+import 'package:flutter_design_patterns/constants/constants.dart';
+
 import 'package:flutter_design_patterns/design_patterns/composite/ifile.dart';
 import 'package:flutter_design_patterns/helpers/index.dart';
 
@@ -15,7 +16,7 @@ class Directory extends StatelessWidget implements IFile {
 
   final List<IFile> files = [];
 
-  void addFile(IFile file) {
+  void addFile({required IFile file}) {
     files.add(file);
   }
 
@@ -37,13 +38,13 @@ class Directory extends StatelessWidget implements IFile {
   Widget render(BuildContext context) {
     return Theme(
       data: ThemeData(
-        accentColor: Colors.black,
+        colorScheme: ColorScheme.fromSwatch().copyWith(primary: Colors.black),
       ),
       child: Padding(
         padding: const EdgeInsets.only(left: LayoutConstants.paddingS),
         child: ExpansionTile(
           leading: const Icon(Icons.folder),
-          title: Text("$title (${FileSizeConverter.bytesToString(getSize())})"),
+          title: Text('$title (${FileSizeConverter.bytesToString(getSize())})'),
           initiallyExpanded: isInitiallyExpanded,
           children: files.map((IFile file) => file.render(context)).toList(),
         ),

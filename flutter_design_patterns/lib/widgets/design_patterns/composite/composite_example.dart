@@ -14,34 +14,45 @@ class CompositeExample extends StatelessWidget {
     final musicDirectory = Directory(
       title: 'Music',
     );
-    musicDirectory.addFile(const AudioFile('Darude - Sandstorm.mp3', 2612453));
-    musicDirectory.addFile(const AudioFile('Toto - Africa.mp3', 3219811));
-    musicDirectory
-        .addFile(const AudioFile('Bag Raiders - Shooting Stars.mp3', 3811214));
+    musicDirectory.addFile(
+        file: const AudioFile(title: 'Darude - Sandstorm.mp3', size: 2612453));
+    musicDirectory.addFile(
+        file: const AudioFile(title: 'Toto - Africa.mp3', size: 3219811));
+    musicDirectory.addFile(
+        file: const AudioFile(
+            title: 'Bag Raiders - Shooting Stars.mp3', size: 3811214));
 
     final moviesDirectory = Directory(title: 'Movies');
 
-    moviesDirectory.addFile(const VideoFile('The Matrix.avi', 951495532));
-    moviesDirectory
-        .addFile(const VideoFile('The Matrix Reloaded.mp4', 1251495532));
+    moviesDirectory.addFile(
+        file: const VideoFile(title: 'The Matrix.avi', size: 951495532));
+    moviesDirectory.addFile(
+        file: const VideoFile(
+            title: 'The Matrix Reloaded.mp4', size: 1251495532));
 
     final catPicturesDirectory = Directory(title: 'Cats');
-    catPicturesDirectory.addFile(const ImageFile('Cat 1.jpg', 844497));
-    catPicturesDirectory.addFile(const ImageFile('Cat 2.jpg', 975363));
-    catPicturesDirectory.addFile(const ImageFile('Cat 3.png', 1975363));
+    catPicturesDirectory.addFile(
+        file: const ImageFile(title: 'Cat 1.jpg', size: 844497));
+    catPicturesDirectory.addFile(
+        file: const ImageFile(title: 'Cat 2.jpg', size: 975363));
+    catPicturesDirectory.addFile(
+        file: const ImageFile(title: 'Cat 3.png', size: 1975363));
 
     final picturesDirectory = Directory(title: 'Pictures');
-    picturesDirectory.addFile(catPicturesDirectory);
-    picturesDirectory.addFile(const ImageFile('Not a cat.png', 2971361));
+    picturesDirectory.addFile(file: catPicturesDirectory);
+    picturesDirectory.addFile(
+        file: const ImageFile(title: 'Not a cat.png', size: 2971361));
 
     final mediaDirectory = Directory(title: 'Media', isInitiallyExpanded: true);
-    mediaDirectory.addFile(musicDirectory);
-    mediaDirectory.addFile(moviesDirectory);
-    mediaDirectory.addFile(picturesDirectory);
-    mediaDirectory.addFile(Directory(title: 'New Folder'));
-    mediaDirectory
-        .addFile(const TextFile('Nothing suspicious there.txt', 430791));
-    mediaDirectory.addFile(const TextFile('TeamTrees.txt', 1042));
+    mediaDirectory.addFile(file: musicDirectory);
+    mediaDirectory.addFile(file: moviesDirectory);
+    mediaDirectory.addFile(file: picturesDirectory);
+    mediaDirectory.addFile(file: Directory(title: 'New Folder'));
+    mediaDirectory.addFile(
+        file: const TextFile(
+            title: 'Nothing suspicious there.txt', size: 430791));
+    mediaDirectory.addFile(
+        file: const TextFile(title: 'TeamTrees.txt', size: 1042));
 
     return mediaDirectory;
   }

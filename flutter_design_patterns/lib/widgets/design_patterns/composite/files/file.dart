@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_design_patterns/constants/layout_constants.dart';
 
-import 'package:flutter_design_patterns/design_patterns/composite/ifile.dart';
+import 'package:flutter_design_patterns/design_patterns/composite/composite.dart';
 import 'package:flutter_design_patterns/helpers/index.dart';
 
 class File extends StatelessWidget implements IFile {
   const File({
     Key? key,
-    required this.title,
     required this.size,
+    required this.title,
     required this.icon,
   }) : super(key: key);
 
-  final String title;
   final int size;
+  final String title;
   final IconData icon;
 
   @override
@@ -22,9 +22,7 @@ class File extends StatelessWidget implements IFile {
   }
 
   @override
-  int getSize() {
-    return size;
-  }
+  int getSize() => size;
 
   @override
   Widget render(BuildContext context) {

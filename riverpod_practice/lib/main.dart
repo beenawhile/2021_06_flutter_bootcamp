@@ -103,6 +103,7 @@ class __TodoListState extends State<_TodoList> {
   Widget build(BuildContext context) {
     return Expanded(child: Consumer(
       builder: (context, ref, child) {
+        print("rebuilt!");
         final todosState = ref.watch(todosNotifierProvider);
         return todosState.when(
           data: (todos) {

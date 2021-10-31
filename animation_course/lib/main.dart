@@ -1,8 +1,8 @@
 import 'package:animation_course/0_widgets/101_implicit_animation_pageview.dart';
 import 'package:animation_course/0_widgets/5_staggered_animation_pageview.dart';
 import 'package:animation_course/5_more_animations/providers/theme_change_notifier.dart';
-import 'package:animation_course/5_more_animations/ux/pages/animated_list_page.dart';
-import 'package:animation_course/5_more_animations/ux/styles/styles.dart';
+// import 'package:animation_course/5_more_animations/ux/pages/animated_list_page.dart';
+// import 'package:animation_course/5_more_animations/ux/styles/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       final theme = ref.watch(themeProvider);
       return MaterialApp(
         title: 'Animation Bootc amp',
-        theme: theme.darkMode ? darkTheme : lightTheme,
+        // theme: theme.darkMode ? darkTheme : lightTheme,
         debugShowCheckedModeBanner: false,
         home: const HomePage(),
       );
@@ -74,13 +74,13 @@ class HomePage extends StatelessWidget {
                 ));
               },
               child: const Text("4. Staggered Animation")),
-          ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => const AnimatedListPage(),
-                ));
-              },
-              child: const Text("5. More Animation")),
+          // ElevatedButton(
+          //     onPressed: () {
+          //       Navigator.of(context).push(MaterialPageRoute(
+          //         builder: (context) => const AnimatedListPage(),
+          //       ));
+          //     },
+          //     child: const Text("5. More Animation")),
         ],
       )),
     );

@@ -34,7 +34,7 @@ class MockNumberTriviaRepository extends _i1.Mock
   @override
   _i4.Future<_i2.Either<_i5.Failure, _i6.NumberTrivia>> getConcreteNumberTrivia(
           num? number) =>
-      (super.noSuchMethod(Invocation.method(#getContreteNumberTrivia, [number]),
+      (super.noSuchMethod(Invocation.method(#getConcreteNumberTrivia, [number]),
           returnValue: Future<_i2.Either<_i5.Failure, _i6.NumberTrivia>>.value(
               _FakeEither_0<_i5.Failure, _i6.NumberTrivia>())) as _i4
           .Future<_i2.Either<_i5.Failure, _i6.NumberTrivia>>);

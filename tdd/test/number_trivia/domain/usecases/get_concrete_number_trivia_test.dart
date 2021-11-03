@@ -23,7 +23,7 @@ void main() {
   const tNumberTrivia = NumberTrivia(text: "test", number: 1);
   test("should get trivia for number from the repository", () async {
     // arrange
-    when(mockNumberTriviaRepository.getContreteNumberTrivia(any))
+    when(mockNumberTriviaRepository.getConcreteNumberTrivia(any))
         .thenAnswer((_) async => const Right(tNumberTrivia));
 
     // act
@@ -31,7 +31,7 @@ void main() {
 
     // assert
     expect(result, const Right(tNumberTrivia));
-    verify(mockNumberTriviaRepository.getContreteNumberTrivia(tNumber));
+    verify(mockNumberTriviaRepository.getConcreteNumberTrivia(tNumber));
     verifyNoMoreInteractions(mockNumberTriviaRepository);
   });
 }

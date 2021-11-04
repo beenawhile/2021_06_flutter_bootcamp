@@ -7,8 +7,7 @@ import 'package:tdd/number_trivia/infrastructure/models/number_trivia_model.dart
 import '../../../fixtures/fixture_reader.dart';
 
 void main() {
-  final tNumberTriviaModel =
-      const NumberTriviaModel(number: 1, text: "Test Text");
+  const tNumberTriviaModel = NumberTriviaModel(number: 1, text: "Test Text");
 
   test("should be a subclass of NumberTrivia entity", () async {
     expect(tNumberTriviaModel.toDomain(), isA<NumberTrivia>());

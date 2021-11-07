@@ -17,9 +17,9 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$NumberTriviaEventTearOff {
   const _$NumberTriviaEventTearOff();
 
-  GetTriviaForConcreteNumber getTriviaForConcreteNumber(String number) {
+  GetTriviaForConcreteNumber getTriviaForConcreteNumber(String numberString) {
     return GetTriviaForConcreteNumber(
-      number,
+      numberString,
     );
   }
 
@@ -35,19 +35,19 @@ const $NumberTriviaEvent = _$NumberTriviaEventTearOff();
 mixin _$NumberTriviaEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String number) getTriviaForConcreteNumber,
+    required TResult Function(String numberString) getTriviaForConcreteNumber,
     required TResult Function() getTriviaForRandomNumber,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String number)? getTriviaForConcreteNumber,
+    TResult Function(String numberString)? getTriviaForConcreteNumber,
     TResult Function()? getTriviaForRandomNumber,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String number)? getTriviaForConcreteNumber,
+    TResult Function(String numberString)? getTriviaForConcreteNumber,
     TResult Function()? getTriviaForRandomNumber,
     required TResult orElse(),
   }) =>
@@ -99,7 +99,7 @@ abstract class $GetTriviaForConcreteNumberCopyWith<$Res> {
   factory $GetTriviaForConcreteNumberCopyWith(GetTriviaForConcreteNumber value,
           $Res Function(GetTriviaForConcreteNumber) then) =
       _$GetTriviaForConcreteNumberCopyWithImpl<$Res>;
-  $Res call({String number});
+  $Res call({String numberString});
 }
 
 /// @nodoc
@@ -116,12 +116,12 @@ class _$GetTriviaForConcreteNumberCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? number = freezed,
+    Object? numberString = freezed,
   }) {
     return _then(GetTriviaForConcreteNumber(
-      number == freezed
-          ? _value.number
-          : number // ignore: cast_nullable_to_non_nullable
+      numberString == freezed
+          ? _value.numberString
+          : numberString // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -130,27 +130,28 @@ class _$GetTriviaForConcreteNumberCopyWithImpl<$Res>
 /// @nodoc
 
 class _$GetTriviaForConcreteNumber extends GetTriviaForConcreteNumber {
-  const _$GetTriviaForConcreteNumber(this.number) : super._();
+  const _$GetTriviaForConcreteNumber(this.numberString) : super._();
 
   @override
-  final String number;
+  final String numberString;
 
   @override
   String toString() {
-    return 'NumberTriviaEvent.getTriviaForConcreteNumber(number: $number)';
+    return 'NumberTriviaEvent.getTriviaForConcreteNumber(numberString: $numberString)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is GetTriviaForConcreteNumber &&
-            (identical(other.number, number) ||
-                const DeepCollectionEquality().equals(other.number, number)));
+            (identical(other.numberString, numberString) ||
+                const DeepCollectionEquality()
+                    .equals(other.numberString, numberString)));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(number);
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(numberString);
 
   @JsonKey(ignore: true)
   @override
@@ -162,30 +163,30 @@ class _$GetTriviaForConcreteNumber extends GetTriviaForConcreteNumber {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String number) getTriviaForConcreteNumber,
+    required TResult Function(String numberString) getTriviaForConcreteNumber,
     required TResult Function() getTriviaForRandomNumber,
   }) {
-    return getTriviaForConcreteNumber(number);
+    return getTriviaForConcreteNumber(numberString);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String number)? getTriviaForConcreteNumber,
+    TResult Function(String numberString)? getTriviaForConcreteNumber,
     TResult Function()? getTriviaForRandomNumber,
   }) {
-    return getTriviaForConcreteNumber?.call(number);
+    return getTriviaForConcreteNumber?.call(numberString);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String number)? getTriviaForConcreteNumber,
+    TResult Function(String numberString)? getTriviaForConcreteNumber,
     TResult Function()? getTriviaForRandomNumber,
     required TResult orElse(),
   }) {
     if (getTriviaForConcreteNumber != null) {
-      return getTriviaForConcreteNumber(number);
+      return getTriviaForConcreteNumber(numberString);
     }
     return orElse();
   }
@@ -227,11 +228,11 @@ class _$GetTriviaForConcreteNumber extends GetTriviaForConcreteNumber {
 }
 
 abstract class GetTriviaForConcreteNumber extends NumberTriviaEvent {
-  const factory GetTriviaForConcreteNumber(String number) =
+  const factory GetTriviaForConcreteNumber(String numberString) =
       _$GetTriviaForConcreteNumber;
   const GetTriviaForConcreteNumber._() : super._();
 
-  String get number => throw _privateConstructorUsedError;
+  String get numberString => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $GetTriviaForConcreteNumberCopyWith<GetTriviaForConcreteNumber>
       get copyWith => throw _privateConstructorUsedError;
@@ -278,7 +279,7 @@ class _$GetTriviaForRandomNumber extends GetTriviaForRandomNumber {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String number) getTriviaForConcreteNumber,
+    required TResult Function(String numberString) getTriviaForConcreteNumber,
     required TResult Function() getTriviaForRandomNumber,
   }) {
     return getTriviaForRandomNumber();
@@ -287,7 +288,7 @@ class _$GetTriviaForRandomNumber extends GetTriviaForRandomNumber {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String number)? getTriviaForConcreteNumber,
+    TResult Function(String numberString)? getTriviaForConcreteNumber,
     TResult Function()? getTriviaForRandomNumber,
   }) {
     return getTriviaForRandomNumber?.call();
@@ -296,7 +297,7 @@ class _$GetTriviaForRandomNumber extends GetTriviaForRandomNumber {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String number)? getTriviaForConcreteNumber,
+    TResult Function(String numberString)? getTriviaForConcreteNumber,
     TResult Function()? getTriviaForRandomNumber,
     required TResult orElse(),
   }) {

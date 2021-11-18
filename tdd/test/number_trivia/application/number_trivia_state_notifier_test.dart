@@ -36,7 +36,7 @@ void main() {
 
   group(
     "GetTriviaForConcreteNumber",
-    () {
+   () {
       const tNumberString = "1";
       const tNumberParse = 1;
       const tNumberTrivia = NumberTrivia(
@@ -68,6 +68,7 @@ void main() {
           // verify(mockInputConverter.stringToUnsignedInteger(tNumberString));
         },
       );
+      test("", () {},);
     },
   );
 }

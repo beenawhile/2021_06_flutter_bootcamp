@@ -41,6 +41,11 @@ class AppRouter {
           settings,
           const StrategyExample(),
         );
+      case _DesignPatternRoutes.stateRoute:
+        return _buildDesignPatternDetailsPageRoute(
+          settings,
+          const StateExample(),
+        );
 
       default:
         return MaterialPageRoute(

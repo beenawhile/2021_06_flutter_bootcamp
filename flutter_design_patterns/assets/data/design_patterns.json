@@ -10,7 +10,6 @@
         "description": "Ensure a class only has one instance, and provide a global point of access to it.",
         "route": "/singleton"
       }
-     
     ]
   },
   {
@@ -48,6 +47,12 @@
         "title": "Strategy",
         "description": "Define a family of algorithms, encapsulate each one, and make them interchange­able. Strategy lets the algorithm vary independently from clients that use it.",
         "route": "/strategy"
+      },
+      {
+        "id": "state",
+        "title": "State",
+        "description": "Allow an object to alter its behavior when its internal state changes. The object will appear to change its class.",
+        "route": "/state"
       }
     ]
   }

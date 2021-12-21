@@ -46,6 +46,11 @@ class AppRouter {
           settings,
           const StateExample(),
         );
+      case _DesignPatternRoutes.facadeRoute:
+        return _buildDesignPatternDetailsPageRoute(
+          settings,
+          const FacadeExample(),
+        );
 
       default:
         return MaterialPageRoute(

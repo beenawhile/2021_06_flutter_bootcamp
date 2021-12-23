@@ -56,6 +56,11 @@ class AppRouter {
           settings,
           const FactoryMethodExample(),
         );
+      case _DesignPatternRoutes.abstractFactoryRoute:
+        return _buildDesignPatternDetailsPageRoute(
+          settings,
+          const AbstractFactoryExample(),
+        );
 
       default:
         return MaterialPageRoute(

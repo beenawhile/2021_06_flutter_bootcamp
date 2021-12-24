@@ -46,6 +46,12 @@
         "title": "Facade",
         "description": "Provide an unified interface to a set of interfaces in a subsystem. Facade defines a higher-level interface that makes the subsystem easier to use.",
         "route": "/facade"
+      },
+      {
+        "id": "flyweight",
+        "title": "Flyweight",
+        "description": "Use sharing to support large numbers of fine-grained objects efficiently.",
+        "route": "/flyweight"
       }
     ]
   },

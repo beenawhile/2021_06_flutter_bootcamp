@@ -83,6 +83,12 @@
         "title": "Interpreter",
         "description": "Given a language, define a representation for its grammar along with an inter­preter that uses the representation to interpret sentences in the language.",
         "route": "/interpreter"
+      },
+      {
+        "id": "iterator",
+        "title": "Iterator",
+        "description": "Provide a way to access the elements of an aggregate object sequentially without exposing its underlying representation.",
+        "route": "/iterator"
       }
     ]
   }

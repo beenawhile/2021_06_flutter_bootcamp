@@ -5,6 +5,7 @@ export 'facade/facade_example.dart';
 export 'factory_method/factory_method_example.dart';
 export 'flyweight/flyweight_example.dart';
 export 'interpreter/interpreter_example.dart';
+export 'iterator/iterator_example.dart';
 export 'singleton/singleton_example.dart';
 export 'state/state_example.dart';
 export 'strategy/strategy_example.dart';

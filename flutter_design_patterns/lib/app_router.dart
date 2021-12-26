@@ -71,6 +71,11 @@ class AppRouter {
           settings,
           const InterpreterExample(),
         );
+      case _DesignPatternRoutes.iteratorRoute:
+        return _buildDesignPatternDetailsPageRoute(
+          settings,
+          const IteratorExample(),
+        );
 
       default:
         return MaterialPageRoute(

@@ -1,5 +1,6 @@
 export 'abstract_factory/abstract_factory_example.dart';
 export 'adapter/adapter_example.dart';
+export 'command/command_example.dart';
 export 'composite/composite_example.dart';
 export 'facade/facade_example.dart';
 export 'factory_method/factory_method_example.dart';

@@ -89,6 +89,12 @@
         "title": "Iterator",
         "description": "Provide a way to access the elements of an aggregate object sequentially without exposing its underlying representation.",
         "route": "/iterator"
+      },
+      {
+        "id": "command",
+        "title": "Command",
+        "description": "Encapsulate a request as an object, thereby letting you parameterize clients with different requests, queue or log requests, and support undoable opera­tions.",
+        "route": "/command"
       }
     ]
   }

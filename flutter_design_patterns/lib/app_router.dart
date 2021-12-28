@@ -86,6 +86,11 @@ class AppRouter {
           settings,
           const MementoExample(),
         );
+      case _DesignPatternRoutes.prototypeRoute:
+        return _buildDesignPatternDetailsPageRoute(
+          settings,
+          const PrototypeExample(),
+        );
 
       default:
         return MaterialPageRoute(

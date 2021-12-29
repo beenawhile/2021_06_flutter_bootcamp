@@ -1,0 +1,24 @@
+import 'package:faker/faker.dart';
+import 'package:flutter_design_patterns/design_patterns/proxy/customer/customer_details.dart';
+import 'package:flutter_design_patterns/design_patterns/proxy/i_customer_details_service.dart';
+
+class CustomerDetailsService implements ICustomerDetailsService {
+  @override
+  Future<CustomerDetails> getCustomerDetails(String id) async {
+    return Future.delayed(
+      const Duration(seconds: 2),
+      () {
+        final email = faker.internet.email();
+        final hobby = faker.sport.name();
+        final position = faker.job.title();
+
+        return CustomerDetails(
+          customerId: id,
+          email: email,
+          hobby: hobby,
+          position: position,
+        );
+      },
+    );
+  }
+}

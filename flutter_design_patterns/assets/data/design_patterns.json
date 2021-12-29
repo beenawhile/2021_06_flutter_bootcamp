@@ -58,6 +58,12 @@
         "title": "Flyweight",
         "description": "Use sharing to support large numbers of fine-grained objects efficiently.",
         "route": "/flyweight"
+      },
+      {
+        "id": "proxy",
+        "title": "Proxy",
+        "description": "Provide a surrogate or placeholder for another object to control access to it.",
+        "route": "/proxy"
       }
     ]
   },

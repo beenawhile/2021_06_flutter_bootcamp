@@ -64,6 +64,12 @@
         "title": "Proxy",
         "description": "Provide a surrogate or placeholder for another object to control access to it.",
         "route": "/proxy"
+      },
+      {
+        "id": "decorator",
+        "title": "Decorator",
+        "description": "Attach additional responsibilities to an object dynamically. Decorators provide a flexible alternative to subclassing for extending functionality.",
+        "route": "/decorator"
       }
     ]
   },

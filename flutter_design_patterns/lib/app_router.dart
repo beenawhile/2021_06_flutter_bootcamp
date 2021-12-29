@@ -96,6 +96,11 @@ class AppRouter {
           settings,
           const ProxyExample(),
         );
+      case _DesignPatternRoutes.decoratorRoute:
+        return _buildDesignPatternDetailsPageRoute(
+          settings,
+          const DecoratorExample(),
+        );
 
       default:
         return MaterialPageRoute(

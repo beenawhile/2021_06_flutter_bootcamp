@@ -1,7 +1,7 @@
 # 2021_06_flutter_bootcamp
-resocoder flutter bootcamp study
+flutter bootcamp study
 
 - bootcamp study docs
-- riverpod, flutter hooks 사용
+- riverpod, flutter hooks
 - + animation
 - + design pattern example

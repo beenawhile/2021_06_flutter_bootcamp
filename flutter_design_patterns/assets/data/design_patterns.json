@@ -70,6 +70,12 @@
         "title": "Decorator",
         "description": "Attach additional responsibilities to an object dynamically. Decorators provide a flexible alternative to subclassing for extending functionality.",
         "route": "/decorator"
+      },
+      {
+        "id": "bridge",
+        "title": "Bridge",
+        "description": "Decouple an abstraction from its implementation so that the two can vary independently.",
+        "route": "/bridge"
       }
     ]
   },

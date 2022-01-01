@@ -101,6 +101,11 @@ class AppRouter {
           settings,
           const DecoratorExample(),
         );
+      case _DesignPatternRoutes.bridgeRoute:
+        return _buildDesignPatternDetailsPageRoute(
+          settings,
+          const BridgeExample(),
+        );
 
       default:
         return MaterialPageRoute(

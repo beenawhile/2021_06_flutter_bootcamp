@@ -111,6 +111,11 @@ class AppRouter {
           settings,
           const BuilderExample(),
         );
+      case _DesignPatternRoutes.chainOfResponsibilityRoute:
+        return _buildDesignPatternDetailsPageRoute(
+          settings,
+          const ChainOfResponsibilityExample(),
+        );
 
       default:
         return MaterialPageRoute(

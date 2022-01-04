@@ -121,6 +121,11 @@ class AppRouter {
           settings,
           const VisitorExample(),
         );
+      case _DesignPatternRoutes.mediatorRoute:
+        return _buildDesignPatternDetailsPageRoute(
+          settings,
+          const MediatorExample(),
+        );
 
       default:
         return MaterialPageRoute(

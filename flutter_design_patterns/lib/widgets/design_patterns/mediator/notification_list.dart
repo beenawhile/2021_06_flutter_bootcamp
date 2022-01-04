@@ -57,8 +57,7 @@ class NotificationList extends StatelessWidget {
                       ),
                     ),
                     const Padding(
-                      padding:
-                          const EdgeInsets.only(left: LayoutConstants.paddingL),
+                      padding: EdgeInsets.only(left: LayoutConstants.paddingL),
                       child: Icon(Icons.message),
                     ),
                   ],

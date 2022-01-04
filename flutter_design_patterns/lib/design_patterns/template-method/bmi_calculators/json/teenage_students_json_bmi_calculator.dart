@@ -1,8 +1,7 @@
 import 'dart:convert';
 
-import 'package:meta/meta.dart';
-
 import 'package:flutter_design_patterns/design_patterns/template-method/template_method.dart';
+import 'package:meta/meta.dart';
 
 class TeenageStudentsJsonBmiCalculator extends StudentsBmiCalculator {
   final JsonStudentsApi _api = JsonStudentsApi();

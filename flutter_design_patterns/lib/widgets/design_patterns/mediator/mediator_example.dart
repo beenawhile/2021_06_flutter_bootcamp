@@ -4,7 +4,6 @@ import 'package:flutter_design_patterns/constants/constants.dart';
 import 'package:flutter_design_patterns/design_patterns/mediator/notification_hub.dart';
 import 'package:flutter_design_patterns/design_patterns/mediator/notification_hub/team_notification_hub.dart';
 import 'package:flutter_design_patterns/design_patterns/mediator/team_member.dart';
-import 'package:flutter_design_patterns/design_patterns/mediator/team_members/admin.dart';
 import 'package:flutter_design_patterns/design_patterns/mediator/team_members/team_members.dart';
 import 'package:flutter_design_patterns/widgets/design_patterns/mediator/notification_list.dart';
 import 'package:flutter_design_patterns/widgets/platform_specific/platform_button.dart';

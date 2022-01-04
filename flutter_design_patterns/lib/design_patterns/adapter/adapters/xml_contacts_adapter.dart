@@ -1,6 +1,4 @@
 import 'package:flutter_design_patterns/design_patterns/adapter/adapter.dart';
-import 'package:flutter_design_patterns/design_patterns/adapter/contact.dart';
-import 'package:flutter_design_patterns/design_patterns/adapter/icontacts_adapter.dart';
 import 'package:xml/xml.dart';
 
 // xml adapter

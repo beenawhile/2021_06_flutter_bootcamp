@@ -126,6 +126,11 @@ class AppRouter {
           settings,
           const MediatorExample(),
         );
+      case _DesignPatternRoutes.observerRoute:
+        return _buildDesignPatternDetailsPageRoute(
+          settings,
+          const ObserverExample(),
+        );
 
       default:
         return MaterialPageRoute(

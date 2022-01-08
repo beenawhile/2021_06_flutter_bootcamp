@@ -1,29 +1,29 @@
 import 'package:flutter_design_patterns/design_patterns/abstract_factory/i_widget_factory.dart';
-import 'package:flutter_design_patterns/design_patterns/abstract_factory/products/activity_indicator/android_activity_indicator.dart';
+import 'package:flutter_design_patterns/design_patterns/abstract_factory/products/activity_indicator/ios_activity_indicator.dart';
 import 'package:flutter_design_patterns/design_patterns/abstract_factory/products/i_activity_indicator.dart';
 import 'package:flutter_design_patterns/design_patterns/abstract_factory/products/i_slider.dart';
 import 'package:flutter_design_patterns/design_patterns/abstract_factory/products/i_switch.dart';
-import 'package:flutter_design_patterns/design_patterns/abstract_factory/products/slider/android_slider.dart';
-import 'package:flutter_design_patterns/design_patterns/abstract_factory/products/switch/android_switch.dart';
+import 'package:flutter_design_patterns/design_patterns/abstract_factory/products/slider/ios_slider.dart';
+import 'package:flutter_design_patterns/design_patterns/abstract_factory/products/switch/ios_switch.dart';
 
-class MaterialWidgetFactory implements IWidgetFactory {
+class CupertinoWidgetFactory implements IWidgetFactory {
   @override
   IActivityIndicator createActivityIndicatory() {
-    return AndroidActivityIndicator();
+    return IosActivityIndicator();
   }
 
   @override
   ISlider createSlider() {
-    return AndroidSlider();
+    return IosSlider();
   }
 
   @override
   ISwitch createSwitch() {
-    return AndroidSwitch();
+    return IosSwitch();
   }
 
   @override
   String getTitle() {
-    return "Android Widgets";
+    return "iOS Widgets";
   }
 }

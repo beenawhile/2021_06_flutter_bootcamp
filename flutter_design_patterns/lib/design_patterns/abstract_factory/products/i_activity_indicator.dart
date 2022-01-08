@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
 abstract class IActivityIndicator {
-  Widget render();
+  Widget render({
+    required double radius,
+  });
 }

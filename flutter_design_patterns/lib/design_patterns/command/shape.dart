@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
 class Shape {
-  late Color color;
-  late double height;
   late double width;
+  late double height;
+  late Color color;
 
   Shape.initial() {
     color = Colors.black;
-    height = 150.0;
-    width = 150.0;
+    height = 150;
+    width = 150;
   }
 }

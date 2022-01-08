@@ -1,29 +1,26 @@
 import 'package:faker/faker.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_design_patterns/design_patterns/command/command.dart';
-import 'package:flutter_design_patterns/design_patterns/command/shape.dart';
+import 'package:flutter_design_patterns/design_patterns/command/index.dart';
 
-class ChangeColorCommand implements Command {
-  Shape shape;
+class ChangeColorCommand implements ICommand {
+  final Shape shape;
   late Color previousColor;
 
-  ChangeColorCommand(this.shape) {
+  ChangeColorCommand({
+    required this.shape,
+  }) {
     previousColor = shape.color;
+  }
+
+  @override
+  String getTitle() {
+    return "Change Color";
   }
 
   @override
   void execute() {
     shape.color = Color.fromRGBO(
-      random.integer(255),
-      random.integer(255),
-      random.integer(255),
-      1.0,
-    );
-  }
-
-  @override
-  String getTitle() {
-    return "Change color";
+        random.integer(255), random.integer(255), random.integer(255), 1);
   }
 
   @override

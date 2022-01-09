@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'package:flutter_design_patterns/design_patterns/memento/memento.dart';
+import 'package:flutter_design_patterns/design_patterns/memento/command_design_pattern/shape.dart';
 
 class ShapeContainer extends StatelessWidget {
   const ShapeContainer({

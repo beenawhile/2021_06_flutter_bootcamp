@@ -4,11 +4,11 @@ import 'package:flutter_design_patterns/design_patterns/memento/command_design_p
 import 'package:flutter_design_patterns/design_patterns/memento/memento/i_memento.dart';
 import 'package:flutter_design_patterns/design_patterns/memento/originator.dart';
 
-class RandomisePropertiesCommand implements ICommand {
+class RandomizePropertiesCommand implements ICommand {
   final Originator originator;
   late final IMemento _backup;
 
-  RandomisePropertiesCommand(this.originator) {
+  RandomizePropertiesCommand(this.originator) {
     _backup = originator.createMemento();
   }
 
@@ -17,14 +17,10 @@ class RandomisePropertiesCommand implements ICommand {
     final shape = originator.state;
 
     shape.color = Color.fromRGBO(
-      random.integer(255),
-      random.integer(255),
-      random.integer(255),
-      1.0,
-    );
+        random.integer(255), random.integer(255), random.integer(255), 1);
 
-    shape.height = random.integer(150, min: 50).toDouble();
     shape.width = random.integer(150, min: 50).toDouble();
+    shape.height = random.integer(150, min: 50).toDouble();
   }
 
   @override

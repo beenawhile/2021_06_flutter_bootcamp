@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_design_patterns/constants/constants.dart';
-import 'package:flutter_design_patterns/design_patterns/memento/memento.dart';
+import 'package:flutter_design_patterns/design_patterns/memento/command_design_pattern/command_history.dart';
+import 'package:flutter_design_patterns/design_patterns/memento/command_design_pattern/commands/randomize_properties_command.dart';
+import 'package:flutter_design_patterns/design_patterns/memento/command_design_pattern/i_command.dart';
+import 'package:flutter_design_patterns/design_patterns/memento/originator.dart';
 import 'package:flutter_design_patterns/widgets/design_patterns/memento/shape_container.dart';
 import 'package:flutter_design_patterns/widgets/platform_specific/platform_button.dart';
 
@@ -16,7 +19,7 @@ class _MementoExampleState extends State<MementoExample> {
   final Originator _originator = Originator();
 
   void _randomiseProperties() {
-    final command = RandomisePropertiesCommand(_originator);
+    final command = RandomizePropertiesCommand(_originator);
     _executeCommand(command);
   }
 

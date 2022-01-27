@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_design_patterns/constants/layout_constants.dart';
+import 'package:flutter_design_patterns/design_patterns/command/commands/index.dart';
 import 'package:flutter_design_patterns/design_patterns/command/index.dart';
 import 'package:flutter_design_patterns/widgets/design_patterns/command/command_history_column.dart';
 import 'package:flutter_design_patterns/widgets/design_patterns/command/shape_container.dart';
@@ -9,29 +10,29 @@ class CommandExample extends StatefulWidget {
   const CommandExample({Key? key}) : super(key: key);
 
   @override
-  _CommandExampleState createState() => _CommandExampleState();
+  State<CommandExample> createState() => _CommandExampleState();
 }
 
 class _CommandExampleState extends State<CommandExample> {
-  final CommandHistory _commandHistory = CommandHistory();
-  final Shape _shape = Shape.initial();
+  final _commandHistory = CommandHistory();
+  final _shape = Shape.initial();
 
   void _changeColor() {
-    final command = ChangeColorCommand(_shape);
+    final command = ChangeColorCommand(shape: _shape);
     _executeCommand(command);
   }
 
   void _changeWidth() {
-    final command = ChangeWidthCommand(_shape);
+    final command = ChangeWidthCommand(shape: _shape);
     _executeCommand(command);
   }
 
   void _changeHeight() {
-    final command = ChangeHeightCommand(_shape);
+    final command = ChangeHeightCommand(shape: _shape);
     _executeCommand(command);
   }
 
-  void _executeCommand(Command command) {
+  void _executeCommand(ICommand command) {
     setState(() {
       command.execute();
       _commandHistory.add(command);
@@ -63,16 +64,16 @@ class _CommandExampleState extends State<CommandExample> {
               onPressed: _changeColor,
             ),
             PlatformButton(
-              text: "Change Width",
-              materialColor: Colors.black,
-              materialTextColor: Colors.white,
-              onPressed: _changeWidth,
-            ),
-            PlatformButton(
               text: "Change Height",
               materialColor: Colors.black,
               materialTextColor: Colors.white,
               onPressed: _changeHeight,
+            ),
+            PlatformButton(
+              text: "Change Width",
+              materialColor: Colors.black,
+              materialTextColor: Colors.white,
+              onPressed: _changeWidth,
             ),
             const Divider(),
             PlatformButton(
@@ -85,7 +86,7 @@ class _CommandExampleState extends State<CommandExample> {
             Row(
               children: [
                 CommandHistoryColumn(
-                    commandList: _commandHistory.commandHistoryList),
+                    commandList: _commandHistory.commandHistory),
               ],
             ),
           ],

@@ -1,15 +1,15 @@
 import 'dart:collection';
 
-import 'package:flutter_design_patterns/design_patterns/command/command.dart';
+import 'package:flutter_design_patterns/design_patterns/command/index.dart';
 
 class CommandHistory {
-  final ListQueue<Command> _commandList = ListQueue<Command>();
+  final ListQueue<ICommand> _commandList = ListQueue<ICommand>();
 
   bool get isEmpty => _commandList.isEmpty;
-  List<String> get commandHistoryList =>
-      _commandList.map((c) => c.getTitle()).toList();
+  List<String> get commandHistory =>
+      _commandList.map((ICommand command) => command.getTitle()).toList();
 
-  void add(Command command) {
+  void add(ICommand command) {
     _commandList.add(command);
   }
 

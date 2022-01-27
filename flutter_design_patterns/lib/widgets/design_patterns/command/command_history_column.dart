@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_design_patterns/constants/layout_constants.dart';
+import 'package:flutter_design_patterns/constants/constants.dart';
 
 class CommandHistoryColumn extends StatelessWidget {
   const CommandHistoryColumn({
@@ -19,9 +19,9 @@ class CommandHistoryColumn extends StatelessWidget {
           style: Theme.of(context).textTheme.headline6,
         ),
         const SizedBox(height: LayoutConstants.spaceS),
-        if (commandList.isEmpty) const Text("Command history is empty."),
-        for (var i = 0; i < commandList.length; i++)
-          Text("${i + 1}. ${commandList[i]}")
+        if (commandList.isNotEmpty)
+          for (int i = 0; i < commandList.length; i++)
+            Text("${i + 1}. ${commandList[i]}")
       ],
     );
   }

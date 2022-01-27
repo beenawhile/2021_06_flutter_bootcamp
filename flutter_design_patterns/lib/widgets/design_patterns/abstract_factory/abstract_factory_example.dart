@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_design_patterns/constants/layout_constants.dart';
-import 'package:flutter_design_patterns/design_patterns/abstract_factory/factories/ios_widget_factory.dart';
+import 'package:flutter_design_patterns/design_patterns/abstract_factory/factories/cupertino_widget_factory.dart';
 import 'package:flutter_design_patterns/design_patterns/abstract_factory/factories/material_widget_factory.dart';
 import 'package:flutter_design_patterns/design_patterns/abstract_factory/i_widget_factory.dart';
-import 'package:flutter_design_patterns/design_patterns/abstract_factory/widgets/widgets.dart';
+import 'package:flutter_design_patterns/design_patterns/abstract_factory/products/i_activity_indicator.dart';
+import 'package:flutter_design_patterns/design_patterns/abstract_factory/products/i_slider.dart';
+import 'package:flutter_design_patterns/design_patterns/abstract_factory/products/i_switch.dart';
 import 'package:flutter_design_patterns/widgets/design_patterns/abstract_factory/factory_selection.dart';
 
 class AbstractFactoryExample extends StatefulWidget {
@@ -16,7 +18,7 @@ class AbstractFactoryExample extends StatefulWidget {
 class _AbstractFactoryExampleState extends State<AbstractFactoryExample> {
   final widgetsFactoryList = <IWidgetFactory>[
     MaterialWidgetFactory(),
-    IosWidgetFactory(),
+    CupertinoWidgetFactory(),
   ];
 
   int _selectedFactoryIndex = 0;
@@ -33,7 +35,7 @@ class _AbstractFactoryExampleState extends State<AbstractFactoryExample> {
 
   void _createWidgets() {
     _activityIndicator =
-        widgetsFactoryList[_selectedFactoryIndex].createActivityIndicator();
+        widgetsFactoryList[_selectedFactoryIndex].createActivityIndicatory();
     _slider = widgetsFactoryList[_selectedFactoryIndex].createSlider();
     _switch = widgetsFactoryList[_selectedFactoryIndex].createSwitch();
   }
@@ -89,7 +91,7 @@ class _AbstractFactoryExampleState extends State<AbstractFactoryExample> {
               style: Theme.of(context).textTheme.subtitle1,
             ),
             const SizedBox(height: LayoutConstants.spaceL),
-            _activityIndicator.render(),
+            _activityIndicator.render(radius: 30),
             const SizedBox(height: LayoutConstants.spaceXL),
             Text(
               'Slider ($_sliderValueString%)',

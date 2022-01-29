@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:animation_course/0_widgets/widgets.dart';
 import 'package:flutter/material.dart';
 

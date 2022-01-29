@@ -5,6 +5,7 @@ import 'package:animation_course/101_implicit_animation_practice/3_animated_phys
 import 'package:animation_course/101_implicit_animation_practice/4_animated_opacity.dart';
 import 'package:animation_course/101_implicit_animation_practice/5_default_text_style.dart';
 import 'package:animation_course/101_implicit_animation_practice/6_animated_alignment.dart';
+import 'package:animation_course/101_implicit_animation_practice/7_animated_controller.dart';
 import 'package:flutter/material.dart';
 
 class ImplicitAnimationPracticePage extends StatelessWidget {
@@ -38,6 +39,10 @@ class ImplicitAnimationPracticePage extends StatelessWidget {
           title: "Animated Alignment",
           child: AnimatedAlignmentPracticePage(),
         ),
+        DemoPage(
+          title: "Animated Controller",
+          child: AnimationControllerExample(),
+        )
       ],
     );
   }

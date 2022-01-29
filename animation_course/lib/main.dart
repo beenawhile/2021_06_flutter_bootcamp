@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
     return Consumer(builder: (context, ref, child) {
       final theme = ref.watch(themeProvider);
       return MaterialApp(
-        title: 'Animation Bootc amp',
+        title: 'Animation Boot camp',
         // theme: theme.darkMode ? darkTheme : lightTheme,
         debugShowCheckedModeBanner: false,
         home: const HomePage(),

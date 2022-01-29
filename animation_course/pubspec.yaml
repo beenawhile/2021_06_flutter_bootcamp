@@ -29,8 +29,6 @@ dependencies:
   flutter_riverpod: ^1.0.0-dev.6
   flutter_sequence_animation: ^4.0.0-nullsafety
   flutter_staggered_animations: ^1.0.0
-  freezed_annotation: ^0.14.3
-  nil: ^1.1.1
   provider: ^6.0.0
   random_color: ^1.0.6-nullsafety
   recase: ^4.0.0
@@ -40,7 +38,6 @@ dev_dependencies:
   build_runner: ^2.1.2
   flutter_test:
     sdk: flutter
-  freezed: ^0.14.5
   lint: ^1.5.3
 
 # For information on the generic Dart part of this file, see the

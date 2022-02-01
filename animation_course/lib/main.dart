@@ -1,12 +1,14 @@
 import 'package:animation_course/0_widgets/101_implicit_animation_pageview.dart';
 import 'package:animation_course/0_widgets/5_staggered_animation_pageview.dart';
 import 'package:animation_course/5_more_animations/providers/theme_change_notifier.dart';
+import 'package:animation_course/6_routes/ux/pages/home_page.dart';
 // import 'package:animation_course/5_more_animations/ux/pages/animated_list_page.dart';
 // import 'package:animation_course/5_more_animations/ux/styles/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '0_widgets/widgets.dart';
+import '5_more_animations/ux/pages/animated_list_page.dart';
 
 void main() => runApp(ProviderScope(child: MyApp()));
 
@@ -18,6 +20,19 @@ class MyApp extends StatelessWidget {
       return MaterialApp(
         title: 'Animation Boot camp',
         // theme: theme.darkMode ? darkTheme : lightTheme,
+        theme: ThemeData(
+            pageTransitionsTheme: const PageTransitionsTheme(
+          builders: {
+            /// THESE ARE PROVIDED AS EXAMPLES.
+            /// They define a MaterialPageRoute page transition animation.
+            /// To customize the default MaterialPageRoute page transition
+            /// animation for different platforms
+            ///
+            TargetPlatform.iOS: ZoomPageTransitionsBuilder(),
+
+            TargetPlatform.android: ZoomPageTransitionsBuilder(),
+          },
+        )),
         debugShowCheckedModeBanner: false,
         home: const HomePage(),
       );
@@ -74,13 +89,20 @@ class HomePage extends StatelessWidget {
                 ));
               },
               child: const Text("4. Staggered Animation")),
-          // ElevatedButton(
-          //     onPressed: () {
-          //       Navigator.of(context).push(MaterialPageRoute(
-          //         builder: (context) => const AnimatedListPage(),
-          //       ));
-          //     },
-          //     child: const Text("5. More Animation")),
+          ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => const AnimatedListPage(),
+                ));
+              },
+              child: const Text("5. More Animation")),
+          ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => const HomeRoutePage(),
+                ));
+              },
+              child: const Text("6. Routes")),
         ],
       )),
     );

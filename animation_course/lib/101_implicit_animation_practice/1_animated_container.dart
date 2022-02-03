@@ -15,9 +15,9 @@ class AnimatedContainerPracticePage extends StatefulWidget {
 
 class _AnimatedContainerPracticePageState
     extends State<AnimatedContainerPracticePage> {
-  var _size = Size(200, 200);
-  var _padding = EdgeInsets.all(9);
-  var _margin = EdgeInsets.all(0);
+  var _size = const Size(200, 200);
+  var _padding = const EdgeInsets.all(9);
+  var _margin = const EdgeInsets.all(0);
 
   var _borderSize = 1.0;
   var _borderRadius = 0.0;
@@ -25,7 +25,7 @@ class _AnimatedContainerPracticePageState
 
   var _color = mustard;
   var _boxShadow = [
-    BoxShadow(
+    const BoxShadow(
       color: Colors.grey,
       offset: Offset(15.0, 15.0),
       blurRadius: 20.0,

@@ -29,8 +29,6 @@ dependencies:
   flutter_riverpod: ^1.0.0-dev.6
   flutter_sequence_animation: ^4.0.0-nullsafety
   flutter_staggered_animations: ^1.0.0
-  freezed_annotation: ^0.14.3
-  nil: ^1.1.1
   provider: ^6.0.0
   random_color: ^1.0.6-nullsafety
   recase: ^4.0.0
@@ -40,7 +38,6 @@ dev_dependencies:
   build_runner: ^2.1.2
   flutter_test:
     sdk: flutter
-  freezed: ^0.14.5
   lint: ^1.5.3
 
 # For information on the generic Dart part of this file, see the
@@ -53,9 +50,8 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  assets:
+    - assets/images/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
   # For details regarding adding assets from package dependencies, see

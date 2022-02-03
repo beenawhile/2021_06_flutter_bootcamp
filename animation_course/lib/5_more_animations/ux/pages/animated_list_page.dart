@@ -9,7 +9,6 @@ import 'package:animation_course/5_more_animations/ux/widgets/phrase_list_item.d
 import 'package:animation_course/5_more_animations/ux/widgets/rotate_scale_transition.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:nil/nil.dart';
 
 class AnimatedListPage extends ConsumerStatefulWidget {
   const AnimatedListPage({Key? key}) : super(key: key);
@@ -74,7 +73,8 @@ class _AnimatedListPageState extends ConsumerState<AnimatedListPage>
 
   void _removeItemFromList(int index) {
     ref.read(phrasesProvider).removeItemFromList(index);
-    _listKey.currentState!.removeItem(index, (_, animation) => nil);
+    _listKey.currentState!
+        .removeItem(index, (_, animation) => const SizedBox());
   }
 
   void _scrollListToBottom() {

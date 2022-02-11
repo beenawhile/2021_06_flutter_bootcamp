@@ -31,6 +31,7 @@ class MyApp extends StatelessWidget {
           ///
           TargetPlatform.iOS: ZoomPageTransitionsBuilder(),
 
+          // TargetPlatform.android: FadeTransitionBuilder(),
           TargetPlatform.android: ZoomPageTransitionsBuilder(),
         },
       )),
@@ -52,66 +53,71 @@ class HomePage extends StatelessWidget {
         title: const Text('Course outputs list'),
       ),
       body: Center(
-          child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          const SizedBox(height: 12),
-          ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => const ImplicitAnimationPageView(),
-                ));
-              },
-              child: const Text("1. Implicit Animation Widgets")),
-          ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => const ImplicitAnimationPracticePage(),
-                ));
-              },
-              child: const Text("1-1. Implicit Animation Widgets Practice")),
-          const SizedBox(height: 12),
-          ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => const ExplicitAnimationPageView(),
-                ));
-              },
-              child: const Text("2. Explicit Animation Widgets")),
-          const SizedBox(height: 12),
-          ElevatedButton(
-              onPressed: () {}, child: const Text("3. Tween Curve Widgets")),
-          const SizedBox(height: 12),
-          ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => const StaggeredAnimationPageView(),
-                ));
-              },
-              child: const Text("4. Staggered Animation")),
-          ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => const AnimatedListPage(),
-                ));
-              },
-              child: const Text("5. More Animation")),
-          ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => const HomeRoutePage(),
-                ));
-              },
-              child: const Text("6. Routes")),
-          ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => const RouteAwareExample(),
-                ));
-              },
-              child: const Text("7. RouteAware Example")),
-        ],
-      )),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            const SizedBox(height: 12),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => const ImplicitAnimationPageView(),
+                  ));
+                },
+                child: const Text("1. Implicit Animation Widgets")),
+            const SizedBox(height: 12),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => const ImplicitAnimationPracticePage(),
+                  ));
+                },
+                child: const Text("1-1. Implicit Animation Widgets Practice")),
+            const SizedBox(height: 12),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => const ExplicitAnimationPageView(),
+                  ));
+                },
+                child: const Text("2. Explicit Animation Widgets")),
+            const SizedBox(height: 12),
+            ElevatedButton(
+                onPressed: () {}, child: const Text("3. Tween Curve Widgets")),
+            const SizedBox(height: 12),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => const StaggeredAnimationPageView(),
+                  ));
+                },
+                child: const Text("4. Staggered Animation")),
+            const SizedBox(height: 12),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => const AnimatedListPage(),
+                  ));
+                },
+                child: const Text("5. More Animation")),
+            const SizedBox(height: 12),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => const HomeRoutePage(),
+                  ));
+                },
+                child: const Text("6. Routes")),
+            const SizedBox(height: 12),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => const RouteAwareExample(),
+                  ));
+                },
+                child: const Text("7. RouteAware Example")),
+          ],
+        ),
+      ),
     );
   }
 }

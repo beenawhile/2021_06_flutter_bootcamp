@@ -28,12 +28,15 @@ class LogoContainer extends StatelessWidget {
 
   Route _createFadeRoute() {
     return PageRouteBuilder(
+      transitionDuration: const Duration(milliseconds: 600),
+      reverseTransitionDuration: const Duration(milliseconds: 600),
       pageBuilder: (context, animation, secondaryAnimation) =>
           InfoPage(content: content),
       transitionsBuilder: (context, animation, secondaryAnimation, child) {
         final opacityTween = Tween<double>(begin: 0, end: 1)
             .chain(CurveTween(curve: Curves.easeOut));
         final opacityAnimation = animation.drive(opacityTween);
+
         return FadeTransition(
           opacity: opacityAnimation,
           child: child,
@@ -46,7 +49,7 @@ class LogoContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
-        var size = constraints.maxHeight * scale;
+        final size = constraints.maxHeight * scale;
         return Align(
           child: GestureDetector(
             onTap: () {

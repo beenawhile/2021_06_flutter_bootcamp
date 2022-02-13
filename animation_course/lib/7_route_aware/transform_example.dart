@@ -15,18 +15,23 @@ class _PerspectiveDemoState extends State<PerspectiveDemo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text("Transform"),
+      ),
       body: Center(
         child: Transform(
           transform: Matrix4(
             1, 0, 0, 0, // for formatting
             0, 1, 0, 0,
-            0, 0, 1, 0.001,
+            0, 0, 1, 0.002,
             0, 0, 0, 1,
           )
             ..rotateX(x)
             ..rotateY(y)
             ..rotateZ(z),
-          alignment: FractionalOffset.center,
+          // alignment: FractionalOffset.center,
+          // alignment: FractionalOffset.centerLeft,
+          alignment: FractionalOffset.topLeft,
           child: GestureDetector(
             onPanUpdate: (details) {
               setState(() {

@@ -5,6 +5,7 @@ import 'package:animation_course/6_routes/ux/transitions/flip_transition.dart';
 import 'package:animation_course/6_routes/ux/widgets/binary_background.dart';
 import 'package:animation_course/6_routes/ux/widgets/learn_more_button/learn_more_button.dart';
 import 'package:animation_course/6_routes/ux/widgets/zoom_page_view.dart';
+import 'package:animation_course/main.dart';
 import 'package:flutter/material.dart';
 
 class HomeRoutePage extends StatefulWidget {
@@ -38,12 +39,14 @@ class _HomeRoutePageState extends State<HomeRoutePage>
   void dispose() {
     _pageController.dispose();
     _animationController.dispose();
+    routeObserver.unsubscribe(this);
     super.dispose();
   }
 
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
+    routeObserver.subscribe(this, ModalRoute.of(context)! as PageRoute);
   }
 
   @override
@@ -89,6 +92,7 @@ class _HomeRoutePageState extends State<HomeRoutePage>
 
   Route _createRoute() {
     return PageRouteBuilder(
+      transitionDuration: _transitionDuration,
       pageBuilder: (context, animation, secondaryAnimation) =>
           const LearnMorePage(),
       transitionsBuilder: (context, animation, secondaryAnimation, child) {

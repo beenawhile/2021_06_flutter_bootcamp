@@ -82,7 +82,10 @@ class FlipTransition extends AnimatedWidget {
                   color: Colors.black12,
                   blurRadius: blur.value,
                   spreadRadius: shadowSpread.value,
-                  offset: Offset(offsetX.value, offsetY.value),
+                  offset: Offset(
+                    offsetX.value,
+                    offsetY.value,
+                  ),
                 ),
               ],
             ),
@@ -115,10 +118,10 @@ class RotationY extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Transform(
+      alignment: FractionalOffset.center,
       transform: Matrix4.identity()
-      ..setEntry(3, 2, -0.001)
-      ..rotateY(rotationY*degree2Radians),
-    
+        ..setEntry(3, 2, -0.001)
+        ..rotateY(rotationY * degree2Radians),
       child: child,
     );
   }

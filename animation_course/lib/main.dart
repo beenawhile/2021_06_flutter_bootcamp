@@ -1,7 +1,7 @@
 import 'package:animation_course/0_widgets/101_implicit_animation_pageview.dart';
 import 'package:animation_course/0_widgets/5_staggered_animation_pageview.dart';
 import 'package:animation_course/6_routes/ux/pages/home_page.dart';
-import 'package:animation_course/7_route_aware/route_aware_example.dart';
+import 'package:animation_course/7_route_aware/route_screen.dart';
 // import 'package:animation_course/5_more_animations/ux/pages/animated_list_page.dart';
 // import 'package:animation_course/5_more_animations/ux/styles/styles.dart';
 import 'package:flutter/material.dart';
@@ -111,7 +111,7 @@ class HomePage extends StatelessWidget {
             ElevatedButton(
                 onPressed: () {
                   Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => const RouteAwareExample(),
+                    builder: (context) => const RouteScreen(),
                   ));
                 },
                 child: const Text("7. RouteAware Example")),
